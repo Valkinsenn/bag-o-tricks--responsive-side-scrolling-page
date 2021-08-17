@@ -19,19 +19,26 @@ For demonstration purposes, I've decided to create a responsive, horizontally-sc
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
 
-## Screenshots
+## Overview
+
+A quick aside and acknowledgement: I found out how to put the vast majority of this together after following Red Stapler's [video](https://www.youtube.com/watch?v=OeaHnxahf40) on YouTube. A lot of this is still me, though. Filip's [video](https://www.youtube.com/watch?v=pNPkVQD7vlM&t=742s) on scroll snapping also helped, too. Without any further ado, here's a preview of coming attractions:
+
+### Screenshots
 
 ### Desktop
 
 ![Desktop screenshot, first page](./screenshots/desktop-screenshot.jpg)
 
-### Mobile (Menu Closed)
+### Mobile
 
-![Mobile screenshot, first page, menu closed](./screenshots/mobile-screenshot-menu-closed.jpg)
+#### Closed & Open
 
-### Mobile (Menu Open)
+![Mobile screenshot, first page, menu closed and open](./screenshots/mobile-screenshot-combined.png)
 
-![Mobile screenshot, first page, menu open](./screenshots/mobile-screenshot-menu-open.png)
+### Links
+
+- My [Github Repo](https://github.com/Valkinsenn/bag-o-tricks--responsive-side-scrolling-page) for this project.
+- The page in action: [link](https://valkinsenn.github.io/bag-o-tricks--responsive-side-scrolling-page/).
 
 ## How I did it
 
@@ -41,9 +48,10 @@ Thankfully, the layout and menu is pretty simple to accomplish, as all that's re
 
 #### Navbar:
 
-```html <!-- Outermost navbar shell -->
+```html 
+<!-- Outermost navbar shell -->
 <nav class="navbar">
-  <!-- Encases all the navbar's parts -->
+  <!-- Encases the navbar's parts -->
   <nav class="nav-wrapper">
     <!-- Main label for menu toggler; toggles the checkbox -->
     <label for="menu-btn-toggler" class="menu-btn">
