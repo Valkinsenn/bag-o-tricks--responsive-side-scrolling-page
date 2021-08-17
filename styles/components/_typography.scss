@@ -1,0 +1,19 @@
+// ============================================================
+// TYPOGRAPHY
+// ============================================================
+
+@use '../abstracts/' as a;
+
+:is(h1, h2, h3, h4, h5, h6) {
+    color: #fff;
+    font-family: a.$primary-font;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+body {
+    color: #aaa;
+    font-family: a.$secondary-font;
+}

@@ -1,0 +1,72 @@
+// ============================================================
+// LAYOUT
+// ============================================================
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.outer-wrapper {
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  @media screen and (min-width: 576px) {
+    height: 100vw;
+    width: 100vh;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    position: absolute;
+    scroll-snap-type: y proximity;
+  }
+}
+
+.page-content {
+  display: flex;
+  flex-direction: row;
+  width: 500vw;
+
+  @media screen and (min-width: 576px) {
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+  }
+}
+
+section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  scroll-snap-align: start;
+  
+  width: 100vw;
+
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+.page-1 {
+  background-color: #111;
+}
+
+.page-2 {
+  background-color: #1a1111;
+}
+
+.page-3 {
+  background-color: #111a11;
+}
+
+.page-4 {
+  background-color: #11111a;
+}
+
+.page-5 {
+  background-color: #1a1a11;
+}

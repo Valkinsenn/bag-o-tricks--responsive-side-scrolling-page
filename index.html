@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Side-Scrolling Website Layout</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <nav class="nav-wrapper">
+
+        <!-- Nav Toggler -->
+        <label for="menu-btn-toggler" class="menu-btn">
+          <span class="menu-btn-burger"></span>
+        </label>
+        <input
+          class="menu-btn-checkbox"
+          id="menu-btn-toggler"
+          name="menu-btn-toggler"
+          type="checkbox"
+        />
+
+        <!-- Links Wrapper -->
+        <nav class="links-wrapper">
+          <a href="#page-1" class="nav-link">Page #1</a>
+          <a href="#page-2" class="nav-link">Page #2</a>
+          <a href="#page-3" class="nav-link">Page #3</a>
+          <a href="#page-4" class="nav-link">Page #4</a>
+          <a href="#page-5" class="nav-link">Page #5</a>
+        </nav>
+      </nav>
+    </nav>
+
+    <div class="outer-wrapper">
+      <div class="page-content">
+        <section class="page-1" id="page-1">
+          <h1>Side-scrolling website</h1>
+          <h2>with responsive navbar</h2>
+        </section>
+        <section class="page-2" id="page-2">
+          <h1>Page Two</h1>
+        </section>
+        <section class="page-3" id="page-3">
+          <h1>Page Three</h1>
+        </section>
+        <section class="page-4" id="page-4">
+          <h1>Page Four</h1>
+        </section>
+        <section class="page-5" id="page-5">
+          <h1>Page Five</h1>
+        </section>
+      </div>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

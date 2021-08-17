@@ -1,0 +1,136 @@
+// ============================================================
+// NAVBAR
+// ============================================================
+
+@use "../abstracts/" as a;
+
+.navbar {
+  // display: flex;
+  // flex-direction: column;
+  height: 100vh;
+  // justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 150px;
+  z-index: 5000;
+
+  @media screen and (min-width: 576px) {
+    left: 0;
+  }
+}
+
+.nav-wrapper {
+  height: 100%;
+  // left: 0;
+  // position: absolute;
+  // top: 0;
+  width: 100%;
+}
+
+.links-wrapper {
+  align-items: flex-start;
+  backdrop-filter: blur(10px);
+  background-color: rgba($color: #000, $alpha: 0.25);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: -100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+
+  @media screen and (min-width: 576px) {
+    left: 0;
+  }
+}
+
+.nav-link {
+  color: #fff;
+  display: block;
+  font-family: a.$primary-font;
+  font-size: 1.25rem;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+
+  &:hover {
+    background-color: rgba(black, 0.5);
+  }
+}
+
+// ========================================
+// Menu Button
+// ========================================
+
+.menu-btn {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 40px;
+    z-index: 5;
+    
+    @media screen and (min-width: 576px) {
+        display: none;
+    }
+}
+
+.menu-btn-burger {
+    background-color: white;
+    display: block;
+    height: 2px;
+    width: 20px;
+    
+    &::before, &::after {
+        background-color: #fff;
+        content: "";
+        display: block;
+        height: 2px;
+        position: absolute;
+        transition: all .25s ease-in-out;
+        width: 20px;
+    }
+    
+    &::before {
+        transform: translateY(-8px);
+    }
+    
+    &::after {
+        transform: translateY(8px);
+    }
+}
+
+.menu-btn-checkbox {
+  left: 0;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+
+  &:checked ~ .links-wrapper {
+    left: 0;
+  }
+}
+
+// ========================================
+// Burger Button Animation
+// ========================================
+
+.menu-btn.open .menu-btn-burger {
+    background-color: transparent;
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
